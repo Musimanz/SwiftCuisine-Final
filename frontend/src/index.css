@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Global background image */
+body {
+  background-image: url('https://img.freepik.com/free-photo/abstract-blur-empty-green-gradient-studio-well-use-as-background-website-template-frame-business-report_1258-67050.jpg?t=st=1738893831~exp=1738897431~hmac=53a5a34c0d168c0093983f31436e2223d0b2b35449d3176d836036c704a1e386&w=740'); /* Replace with your image path */
+  background-size: cover;  /* Cover the entire screen */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* No repeating */
+  background-attachment: fixed; /* Keeps the background fixed while scrolling */
+}
