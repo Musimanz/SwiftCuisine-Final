@@ -1,3 +1,15 @@
+# SwiftCuisine 🍳
+> **Live Frontend Demo:** [Click here to view the live app on Vercel](https://swiftcuisine.vercel.app/)
+
+An intelligent recipe generator built using the MERN stack.
+
+---
+
+### ⚠️ Important Deployment Note
+The **live Vercel preview showcases the frontend client only**. 
+
+To avoid the ongoing costs of hosting database clusters and server instances, the **live backend API is currently inactive**.
+
 # API Documentation
 
 ## Configuring Project
