@@ -3,6 +3,8 @@ import axios from "axios";
 import { FaHeart } from "react-icons/fa"; // Import heart icon
 import { Link } from "react-router-dom";
 
+const API_BASE = process.env.REACT_APP_API_BASE_URL || "http://localhost:5000";
+
 const RecipesPage = () => {
   const [allCategories] = useState([
     "Vegetables",
@@ -47,7 +49,7 @@ const RecipesPage = () => {
     const fetchIngredients = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:5000/api/ingredients?category=${selectedCategory}&limit=25`
+          `${API_BASE}/api/ingredients?category=${selectedCategory}&limit=25`
         );
         setIngredients(response.data);
       } catch (error) {
@@ -78,7 +80,7 @@ const RecipesPage = () => {
     if (query.length > 1) {
       try {
         const response = await axios.get(
-          `http://localhost:5000/api/ingredients/search?query=${query}`
+          `${API_BASE}/api/ingredients/search?query=${query}`
         );
 
         // Remove duplicates by creating a Set of unique ingredient names
@@ -103,7 +105,7 @@ const RecipesPage = () => {
 
     setLoading(true);
     try {
-      const response = await axios.post("http://localhost:5000/api/recipes/generate", {
+      const response = await axios.post(`${API_BASE}/api/recipes/generate`, {
         ingredients: selectedIngredients,
       });
 
@@ -118,7 +120,7 @@ const RecipesPage = () => {
   // Function to add recipe to favorites
   const addToFavorites = async (recipe) => {
     try {
-      const response = await axios.post("http://localhost:5000/api/recipes/bookmark", {
+      const response = await axios.post(`${API_BASE}/api/recipes/bookmark`, {
         name: recipe.name,
         ingredients: recipe.ingredients,
         instructions: recipe.instructions,

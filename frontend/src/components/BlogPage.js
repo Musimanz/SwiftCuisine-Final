@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom"; // For navigating to the full blog post
 
+const API_BASE = process.env.REACT_APP_API_BASE_URL || "http://localhost:5000";
+
 const BlogPage = () => {
   const [blogs, setBlogs] = useState([]);
 
@@ -9,7 +11,7 @@ const BlogPage = () => {
   useEffect(() => {
     const fetchBlogs = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/api/blog"); // Backend API for fetching blogs
+        const response = await axios.get(`${API_BASE}/api/blog`); // Backend API for fetching blogs
         setBlogs(response.data);
       } catch (error) {
         console.error("Error fetching blogs:", error);

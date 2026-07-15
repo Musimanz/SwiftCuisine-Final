@@ -3,9 +3,9 @@ import { BrowserRouter as Router, Route, Routes, useLocation } from "react-route
 import LandingPage from "./components/LandingPage";
 import RecipesPage from "./components/RecipesPage";
 import SignUp from "./components/SignUp";
-import Login from "./components/Login"; // Import the Login page
-import Header from "./components/Header"; // Global Header
-import Footer from "./components/Footer"; // Global Footer
+import Login from "./components/Login"; 
+import Header from "./components/Header";
+import Footer from "./components/Footer"; 
 import TestAPI from "./components/TestAPI";
 import BookmarkedRecipesPage from "./components/BookmarkedRecipesPage";
 import BlogPage from "./components/BlogPage";
@@ -14,7 +14,7 @@ import BlogDetails from "./components/BlogDetails";
 function App() {
   const location = useLocation();
 
-  // List of routes where header and footer should NOT appear
+  // List of routes where header and footer should not appear
   const excludedRoutes = ["/signup", "/login"];
 
   const isExcludedRoute = excludedRoutes.includes(location.pathname);

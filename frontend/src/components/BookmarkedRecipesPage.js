@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { FaTrash } from "react-icons/fa"; // Import trash icon for removing bookmarks
 
+const API_BASE = process.env.REACT_APP_API_BASE_URL || "http://localhost:5000";
+
 const BookmarkedRecipesPage = () => {
   const [bookmarkedRecipes, setBookmarkedRecipes] = useState([]);
 
@@ -9,7 +11,7 @@ const BookmarkedRecipesPage = () => {
   useEffect(() => {
     const fetchBookmarkedRecipes = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/api/recipes/bookmarked");
+        const response = await axios.get(`${API_BASE}/api/recipes/bookmarked`);
         setBookmarkedRecipes(response.data);
       } catch (error) {
         console.error("Error fetching bookmarked recipes:", error);
@@ -22,7 +24,7 @@ const BookmarkedRecipesPage = () => {
   // Function to remove a recipe from bookmarks
   const removeBookmark = async (recipeId) => {
     try {
-      const response = await axios.post("http://localhost:5000/api/recipes/unbookmark", { id: recipeId });
+      const response = await axios.post(`${API_BASE}/api/recipes/unbookmark`, { id: recipeId });
   
       if (response.status === 200) {
         // Remove the recipe from UI

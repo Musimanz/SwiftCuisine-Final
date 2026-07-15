@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
@@ -24,61 +25,56 @@ const Footer = () => {
           <div className="grid grid-cols-2 gap-x-16 gap-y-6 mt-8 md:mt-0 md:ml-12">
             {/* About Section */}
             <div>
-              <h3 className="text-green-400 font-semibold text-lg">About</h3>
+              <h3 className="text-green-400 font-semibold text-lg">About Dev</h3>
               <ul className="mt-2 space-y-2">
                 <li>
-                  <a href="/login" className="hover:text-green-400">
-                    Login
-                  </a>
+                  <Link to="linkedin.com/in/mustafa-khawar-a3462a295" className="hover:text-green-400">
+                    Linkedin
+                  </Link>
                 </li>
                 <li>
-                  <a href="/blog" className="hover:text-green-400">
-                    Blog
-                  </a>
+                  <Link to="https://github.com/Musimanz" className="hover:text-green-400">
+                    Github
+                  </Link>
                 </li>
               </ul>
             </div>
 
             {/* Terms Section */}
             <div>
-              <h3 className="text-green-400 font-semibold text-lg">Terms</h3>
+              <h3 className="text-green-400 font-semibold text-lg">Useful Links</h3>
               <ul className="mt-2 space-y-2">
                 <li>
-                  <a href="#terms" className="hover:text-green-400">
-                    Of Use
-                  </a>
+                  <Link to="#terms" className="hover:text-green-400">
+                    Terms of Use
+                  </Link>
                 </li>
                 <li>
-                  <a href="#policy" className="hover:text-green-400">
+                  <Link to="#policy" className="hover:text-green-400">
                     Policy
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#reads" className="hover:text-green-400">
-                    Reads
-                  </a>
+                  <Link to="/bookmarked-recipes" className="hover:text-green-400">
+                    Bookmarks
+                  </Link>
                 </li>
               </ul>
             </div>
 
             {/* Recipe Section */}
             <div>
-              <h3 className="text-green-400 font-semibold text-lg">Recipe</h3>
+              <h3 className="text-green-400 font-semibold text-lg">Recipes</h3>
               <ul className="mt-2 space-y-2">
                 <li>
-                  <a href="/recipes" className="hover:text-green-400">
+                  <Link to="/recipes" className="hover:text-green-400">
                     Recipe Generator
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="/blog" className="hover:text-green-400">
-                    Recipe Read
-                  </a>
-                </li>
-                <li>
-                  <a href="/blog" className="hover:text-green-400">
+                  <Link to="/blog" className="hover:text-green-400">
                     Recipe Blogs
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -89,12 +85,12 @@ const Footer = () => {
         <div className="text-center text-gray-500 text-sm">
           &copy; 2024{" "}
           <a
-            href="https://janpoth.com"
+            href="#"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-green-400"
           >
-            Jan Poth
+            SwiftCuisine
           </a>
           . All rights reserved.
         </div>
