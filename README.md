@@ -8,7 +8,7 @@ An intelligent recipe generator built using the MERN stack.
 ### ⚠️ Important Deployment Note
 The **live Vercel preview showcases the frontend client only**. 
 
-To avoid the ongoing costs of hosting database clusters and GPT API credits, the **live backend API is currently inactive**.
+To avoid the ongoing costs of hosting server instances and GPT API credits, the **live backend API is currently inactive**.
 
 # API Documentation
 
